@@ -1,4 +1,4 @@
-# sync_data_restar_debug_tool
+# sync_data_restart_visual_studio
 
 自動同步資源 重啟 visual studio 並 執行 Debug 的工具
 
