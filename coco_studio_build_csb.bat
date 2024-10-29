@@ -3,7 +3,11 @@ REM Author: weitsunglin
 
 set /p userInput="input ALL or module name: "
 
-"F:\Cocos\Cocos Studio\Cocos.Tool.exe" publish -d Serializer_FlatBuffers -f "F:\_project\TMD\CocosStudio_Inanna\CocoStudioProject\Inanna\Inanna.ccs" -o res
+echo Start building cocos resources...
+
+"F:\Cocos\Cocos Studio\Cocos.Tool.exe" publish -d Serializer_FlatBuffers -f "F:\_project\TMD\CocosStudio_Inanna\CocoStudioProject\Inanna\Inanna.ccs" -o res > nul 2>&1
+
+echo Start copy  resources...
 
 if %ERRORLEVEL% equ 0 (
     echo Success
