@@ -7,7 +7,6 @@ if %ERRORLEVEL% == 0 (
     echo Visual Studio is running, sending F5 key...
 ) else (
     echo Visual Studio is not running, starting it...
-    rem Start Visual Studio and open a specific solution
     start "" "F:\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" "F:\_project\TMD\SouthPark\ClientCocos\proj.win32\ClientCocos.sln"
     rem Wait for a while to ensure Visual Studio has started
     timeout /t 10 > nul
@@ -17,4 +16,3 @@ rem Execute AutoHotkey script to send F5 key
 start "" "F:\_project\sync_data_restar_debug_tool\sendF5.ahk"
 
 endlocal
-pause
