@@ -1,4 +1,4 @@
-# CocosStudioDevTool
+# CocosStudio_DevTool
 
 - 自動同步資源 重啟 visual studio 並 執行 Debug 的工具
 
