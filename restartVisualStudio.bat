@@ -13,6 +13,6 @@ if %ERRORLEVEL% == 0 (
 )
 
 rem Execute AutoHotkey script to send F5 key
-start "" "F:\_project\sync_data_restar_debug_tool\sendF5.ahk"
+start "" "F:\_project\CocosStudio_DevTool\sendF5.ahk"
 
 endlocal

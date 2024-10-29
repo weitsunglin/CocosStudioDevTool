@@ -2,4 +2,4 @@
 
 start /wait "" "inanna.ffs_batch"
 
-F:\_project\sync_data_restar_debug_tool\restartVisualStudio.bat
+F:\_project\CocosStudio_DevTool\restartVisualStudio.bat
