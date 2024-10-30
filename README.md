@@ -15,7 +15,7 @@
 2. 執行 coco_studio_build_csb.bat
 3. 輸入的參數可是: ALL 或 指定模組
 
-## 執行流程
+## 程式流程
 
 ### lua
 

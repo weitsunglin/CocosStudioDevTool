@@ -45,8 +45,8 @@
         </Pair>
     </FolderPairs>
     <Errors Ignore="true" Retry="0" Delay="5"/>
-    <PostSyncCommand Condition="Completion">‪F:\_project\restart.bat</PostSyncCommand>
-    <LogFolder>D:\TMD_PUBLIC\TMD\testing\FreeFileSync_Logs</LogFolder>
+    <PostSyncCommand Condition="Completion"/>
+    <LogFolder/>
     <EmailNotification Condition="Always"/>
     <GridViewType>Action</GridViewType>
     <Batch>

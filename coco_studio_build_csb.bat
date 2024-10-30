@@ -9,11 +9,16 @@ set "outputPath=%projectRoot%\Inanna\InannaResource\Inanna"
 REM Get user input to determine the scope of resources to process
 set /p userInput="input ALL or module name: "
 
-echo Cleaning past cocos resources...
-rd /S /Q "%cocosStudioPath%\res"
+
+if exist "%cocosStudioPath%\res" (
+    echo Cleaning past cocos resources...
+    rd /S /Q "%cocosStudioPath%\res"
+) else (
+    echo No previous cocos resources found.
+)
 
 echo Starting to build cocos resources...
-"%programFiles%\Cocos\Cocos Studio\Cocos.Tool.exe" publish -d Serializer_FlatBuffers -f "%cocosStudioPath%\Inanna.ccs" -o res > nul 2>&1
+"F:\Cocos\Cocos Studio\Cocos.Tool.exe" publish -d Serializer_FlatBuffers -f "%cocosStudioPath%\Inanna.ccs" -o res > nul 2>&1
 
 echo Starting to copy resources...
 
