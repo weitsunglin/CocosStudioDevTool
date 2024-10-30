@@ -1,9 +1,18 @@
 @echo off
+setlocal
 
-echo Start copy  resources...
+REM Set paths for resources and batch scripts
+set "ffsBatchScript=inanna.ffs_batch"
+set "restartScript=F:\_project\CocosStudio_DevTool\restartVisualStudio.bat"
 
-start /wait "" "inanna.ffs_batch"
+echo Starting to copy resources...
 
-echo Start restartVisualStudio...
+REM Run the ffs batch script and wait for it to finish
+start /wait "" "%ffsBatchScript%"
 
-F:\_project\CocosStudio_DevTool\restartVisualStudio.bat
+echo Starting Visual Studio restart...
+
+REM Run the restartVisualStudio script
+"%restartScript%"
+
+endlocal

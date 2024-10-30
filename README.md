@@ -1,28 +1,40 @@
 # CocosStudio_DevTool
 
-- 自動同步資源 重啟 visual studio 並 執行 Debug 的工具
-
+- 自動編 cocos studio 資源，同步 cocos & lua 並 重啟 visual studio 的工具
 - 使用 Visual Studio 2013，安裝路徑為系統預設
-
 - 安裝 auto hit key v1.1.37.02，安裝後位置在: C:\Program Files\AutoHotkey
 
-## 使用流程 (調整 lua)
+## 使用流程 (lua)
 
-- inanna lua resources folder → Visual Studio debug folder → 重啟 Visual Studio
-
-1. 編輯 lua 代碼
+1. 修正 bat 及 ffs_batch 路徑
 2. 執行 start_ffs_batch.bat
 
-## 使用流程 (調整 cocos)
+## 使用流程 (cocos & lua)
 
-- studio 圖片 → inanna resources folder → res folder → inanna resources folder → Visual Studio debug folder → 重啟 Visual Studio
-
-1. 編輯 cocos studio
+1. 修正 bat 及 ffs_batch 路徑
 2. 執行 coco_studio_build_csb.bat
 3. 輸入的參數可是: ALL 或 指定模組
 
-## 補充
+## 執行流程
 
-1. 此倉庫的環境設定跟您的不一樣，所以檔案中的路徑要自己替換!!
-2. 不提供到府安裝的服務
-3. studio 圖片 → inanna resources folder 會做這段流程是因為編出來的資源，如果節點沒引用某張圖片，那某張圖片就不會跟著出去!
+### lua
+
+```mermaid
+flowchart TD
+    A[start_ffs_batch.bat] --> B[restartVisualStudio.bat]
+    B --> C[restartVisualStudio.bat]
+    C --> D[f5.ahk]
+    C --> E[restartVisualStudio2.bat]
+    E --> F[f5.ahk 或 ctrl_shift_f5.ahk]
+```
+
+### cocos
+
+```mermaid
+flowchart TD
+    A[coco_studio_build_csb.bat] --> B[start_ffs_batch.bat]
+    B --> C[restartVisualStudio.bat]
+    C --> D[f5.ahk]
+    C --> E[restartVisualStudio2.bat]
+    E --> F[f5.ahk 或 ctrl_shift_f5.ahk]
+```
