@@ -9,14 +9,6 @@ set "outputPath=%projectRoot%\Inanna\InannaResource\Inanna"
 REM Get user input to determine the scope of resources to process
 set /p userInput="input ALL or module name: "
 
-
-if exist "%cocosStudioPath%\res" (
-    echo Cleaning past cocos resources...
-    rd /S /Q "%cocosStudioPath%\res"
-) else (
-    echo No previous cocos resources found.
-)
-
 echo Starting to build cocos resources...
 "F:\Cocos\Cocos Studio\Cocos.Tool.exe" publish -d Serializer_FlatBuffers -f "%cocosStudioPath%\Inanna.ccs" -o res > nul 2>&1
 
@@ -53,4 +45,11 @@ if %ERRORLEVEL% equ 0 (
     call start_ffs_batch.bat
 ) else (
     echo Build failed
+)
+
+if exist "%cocosStudioPath%\res" (
+    echo Cleaning past cocos resources...
+    rd /S /Q "%cocosStudioPath%\res"
+) else (
+    echo No previous cocos resources found.
 )
