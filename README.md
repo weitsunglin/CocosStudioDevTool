@@ -4,6 +4,8 @@
 - 使用 Visual Studio 2013，安裝路徑為系統預設
 - 安裝 auto hit key v1.1.37.02，安裝後位置在: C:\Program Files\AutoHotkey
 
+![CocosStudio_DevTool](https://github.com/weitsunglin/CocosStudio_DevTool/blob/main/CocosStudio_DevTool.jpg)
+
 ## 使用流程 (lua)
 
 1. 修正 bat 及 ffs_batch 路徑
