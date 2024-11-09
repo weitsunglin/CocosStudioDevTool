@@ -30,7 +30,7 @@ flowchart TD
     E --> F[f5.ahk 或 ctrl_shift_f5.ahk]
 ```
 
-### cocos
+### cocos & lua
 
 ```mermaid
 flowchart TD
