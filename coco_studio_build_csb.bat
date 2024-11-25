@@ -35,7 +35,7 @@ if %ERRORLEVEL% equ 0 (
         rmdir /s /q "%outputPath%\%userInput%"
         xcopy "%cocosStudioPath%\res\%userInput%" "%outputPath%\%userInput%" /e /i /y
         xcopy "%cocosStudioPath%\cocosstudio\%userInput%\*" "%outputPath%\%userInput%\" /e /i /y
-
+		
         REM Delete unnecessary files in the specified module
         del /s /q "%outputPath%\%userInput%\*.csd"
         del /s /q "%outputPath%\%userInput%\*.udf"
