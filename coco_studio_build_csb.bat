@@ -28,6 +28,7 @@ if %ERRORLEVEL% equ 0 (
         REM Delete unnecessary files
         del /s /q "%outputPath%\*.csd"
         del /s /q "%outputPath%\*.udf"
+		del /s /q "%outputPath%\*.csi"
     ) else (
         echo Copying specific module resources...
 
@@ -39,6 +40,7 @@ if %ERRORLEVEL% equ 0 (
         REM Delete unnecessary files in the specified module
         del /s /q "%outputPath%\%userInput%\*.csd"
         del /s /q "%outputPath%\%userInput%\*.udf"
+		del /s /q "%outputPath%\%userInput%\*.csi"
     )
 
     REM Run the next batch file
